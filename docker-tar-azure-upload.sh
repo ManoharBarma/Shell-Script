@@ -1,5 +1,5 @@
-#!/bin/bash  
-build_and_tar() {  
+#!/bin/bash 
+
     # variables  
     IMAGE_NAME="docker_image"          
     VERSION="latest"                      
@@ -7,6 +7,8 @@ build_and_tar() {
     STORAGE_ACCOUNT_NAME="mystorageaccount"
     STORAGE_ACCOUNT_KEY="my_storage_key"  
     TARFILE="${IMAGE_NAME}_${VERSION}.tar"
+    
+build_and_tar() {  
     # script
     docker build -t "$IMAGE_NAME:$VERSION" .  
     echo "Docker build success"
